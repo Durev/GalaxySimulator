@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+sun:
+  name: Sun
+
+polaris:
+  name: Polaris
+
+sirius:
+  name: Sirius
