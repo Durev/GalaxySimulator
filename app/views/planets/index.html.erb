@@ -1,5 +1,36 @@
 <h1>Planets</h1>
 <hr>
 <p>Create a new planet</p>
+
+<form action="/planets" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <div>
+    <h4>Star</h4>
+    <input type="radio" name="star[star_id]" value="1">
+    <label for="">Sun</label>
+    <input type="radio" name="star[star_id]" value="2">
+    <label for="">Polaris</label>
+    <input type="radio" name="star[star_id]" value="3">
+    <label for="">Sirius</label>
+  </div>
+
+  <div>
+    <h4>Type</h4>
+    <input type="radio" name="planet[nature]" value="terrestrial">
+    <label for="">Terrestrial</label>
+    <input type="radio" name="planet[nature]" value="giant">
+    <label for="">Giant</label>
+  </div>
+
+  <div>
+    <label>Name</label>
+    <input type="text" name="planet[name]">
+  </div>
+
+  <input type="submit" value="Create">
+
+</form>
 <hr>
 <p>List all planets (grouped by star)</p>
+
