@@ -2,9 +2,12 @@
 
 sun:
   name: Sun
+  id: 1
 
 polaris:
   name: Polaris
+  id: 2
 
 sirius:
   name: Sirius
+  id: 3
