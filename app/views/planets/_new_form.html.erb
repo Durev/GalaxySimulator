@@ -1,0 +1,29 @@
+<form action="/planets" method="post" class="">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <div class="form-group">
+    <h4>- Star <i class="fa fa-star"></i> -</h4>
+    <input type="radio" name="star[star_id]" value="1" checked>
+    <label for="">Sun</label>
+    <input type="radio" name="star[star_id]" value="2">
+    <label for="">Polaris</label>
+    <input type="radio" name="star[star_id]" value="3">
+    <label for="">Sirius</label>
+  </div>
+
+  <div class="form-group">
+    <h4>- Type -</h4>
+    <input type="radio" name="planet[nature]" value="terrestrial" checked>
+    <label for="">Terrestrial</label>
+    <input type="radio" name="planet[nature]" value="giant">
+    <label for="">Giant</label>
+  </div>
+
+  <div class="form-group">
+    <h4>- Name -</h4>
+    <input type="text" name="planet[name]" placeholder="Planet name">
+  </div>
+
+  <input type="submit" value="Create" class="btn btn-success btn-lg">
+
+</form>

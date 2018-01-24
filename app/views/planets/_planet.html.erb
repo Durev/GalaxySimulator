@@ -1,3 +1,8 @@
-<li>
-  <%= planet.name %> - <%= planet.nature %>
-</li>
+<% if planet.nature == "terrestrial" %>
+  <div class="planet terrestrial">
+  <%= planet.name.capitalize %> <i class="fa fa-globe fa-2x fa-spin"></i>
+<% else %>
+  <div class="planet giant">
+  <%= planet.name.capitalize %> <i class="fa fa-eercast fa-2x fa-spin"></i>
+<% end %>
+  </div>

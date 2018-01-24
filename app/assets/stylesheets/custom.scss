@@ -1,0 +1,61 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.new-form {
+  max-width: 500px;
+  float: none;
+  margin: 15px auto;
+  background-color: #34495e;
+  padding: 12px;
+  border-radius: 15px;
+  text-align: center;
+
+  input[type=text] {
+    color: #2c3e50;
+  }
+
+  .form-title {
+    color: #5cb85c;
+  }
+}
+
+.planets-filter {
+  float: none;
+  margin: 15px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.planet-list {
+  background-color: #34495e;
+  border-radius: 15px;
+  padding: 8px;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+.planet {
+  text-align: center;
+  padding: 8px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.terrestrial {
+  background-color: #84817a;
+}
+
+.giant {
+  background-color: #227093;
+}

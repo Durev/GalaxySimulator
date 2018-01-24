@@ -1,37 +1,47 @@
-<p>Create a new planet</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 new-form">
+      <h4 class="form-title">Create a new planet</h4>
+      <%= render 'new_form' %>
+    </div>
+  </div><!-- /row -->
 
-<form action="/planets" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <hr>
+  <h1>Planets <i class="fa fa-superpowers"></i></h1>
+  <div class="row">
+    <div class="col-sm-6 planets-filter">
 
-  <div>
-    <h4>Star</h4>
-    <input type="radio" name="star[star_id]" value="1">
-    <label for="">Sun</label>
-    <input type="radio" name="star[star_id]" value="2">
-    <label for="">Polaris</label>
-    <input type="radio" name="star[star_id]" value="3">
-    <label for="">Sirius</label>
-  </div>
+      <form id="type-filter">
+        <div class="form-group">
+          <p>Display :
+          <input type="radio" name="type" value="All" id="All" checked>
+          <label for="All">All</label>
+          <input type="radio" name="type" value="Terrestrials" id="Terrestrials">
+          <label for="Terrestrials">Terrestrial</label>
+          <input type="radio" name="type" value="Giants" id="Giants">
+          <label for="Giants">Giant</label>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div><!-- /row -->
 
-  <div>
-    <h4>Type</h4>
-    <input type="radio" name="planet[nature]" value="terrestrial">
-    <label for="">Terrestrial</label>
-    <input type="radio" name="planet[nature]" value="giant">
-    <label for="">Giant</label>
-  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="planet-list">
+        <%= render partial: "star_system", locals: { star_name: "Sun", planets: @sun_planets } %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="planet-list">
+        <%= render partial: "star_system", locals: { star_name: "Polaris", planets: @polaris_planets } %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="planet-list">
+        <%= render partial: "star_system", locals: { star_name: "Sirius", planets: @sirius_planets } %>
+      </div>
+    </div>
 
-  <div>
-    <label>Name</label>
-    <input type="text" name="planet[name]">
-  </div>
-
-  <input type="submit" value="Create">
-
-</form>
-<hr>
-<h2>Planets</h2>
-
-  <%= render partial: "star_system", locals: { star_name: "Sun", planets: @sun_planets } %>
-  <%= render partial: "star_system", locals: { star_name: "Polaris", planets: @polaris_planets } %>
-  <%= render partial: "star_system", locals: { star_name: "Sirius", planets: @sirius_planets } %>
+  </div><!-- /row -->
+</div><!-- /container -->
