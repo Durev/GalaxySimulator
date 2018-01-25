@@ -29,6 +29,7 @@ body {
 .planets-filter {
   float: none;
   margin: 15px auto;
+  text-align: center;
 }
 
 h1 {
@@ -50,6 +51,9 @@ h1 {
   padding: 8px;
   margin: 2px;
   border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .terrestrial {
@@ -58,4 +62,8 @@ h1 {
 
 .giant {
   background-color: #227093;
+}
+
+.delete-form {
+  display: inline;
 }

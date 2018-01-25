@@ -9,6 +9,7 @@ class PlanetCreationTest < ActionDispatch::IntegrationTest
                                              nature: "earthish" },
                                    star: { star_id: "2" } }
     end
+    follow_redirect!
     assert_template 'planets/index'
   end
 
